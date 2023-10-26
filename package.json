@@ -1,0 +1,19 @@
+{
+  "name": "downloader",
+  "version": "1.0.0",
+  "description": "download manager for personal use",
+  "main": "index.js",
+  "keywords": [],
+  "scripts": {
+    "yt": "ts-node src/youtube"
+  },
+  "author": "Wan Lucas",
+  "license": "ISC",
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "ytdl-core": "^4.11.5"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.4"
+  }
+}
