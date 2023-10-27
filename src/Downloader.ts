@@ -1,6 +1,5 @@
 import internal from 'stream';
 import ProgressLog from './utils/ProgressLog';
-
 import fs from 'fs';
 
 export default class Downloader {
@@ -30,8 +29,8 @@ export default class Downloader {
         const total = totalLength;
 
         this.progressLog.start(
-          parseFloat((total / 1e5).toFixed(1)),
-          parseFloat((downloaded / 1e5).toFixed(1)),
+          parseFloat((total / 1e6).toFixed(1)),
+          parseFloat((downloaded / 1e6).toFixed(1)),
         );
       },
     );
