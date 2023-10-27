@@ -17,7 +17,7 @@ export default class Youtube extends Downloader {
     const videoId = this.getId(url);
     const info = await ytdl.getInfo(videoId);
     const stream = ytdl.downloadFromInfo(info, { filter: 'audioonly' });
-    const title = info.videoDetails.title.replace(' ', '') + '.mp3';
+    const title = info.videoDetails.title.replace(/\s/g, '') + '.mp3';
 
     this.download(stream, { title });
   }
@@ -26,7 +26,7 @@ export default class Youtube extends Downloader {
     const videoId = this.getId(url);
     const info = await ytdl.getInfo(videoId);
     const stream = ytdl.downloadFromInfo(info, { filter: 'videoandaudio' });
-    const title = info.videoDetails.title.replace(' ', '') + '.mp4';
+    const title = info.videoDetails.title.replace(/\s/g, '') + '.mp4';
 
     this.download(stream, { title });
   }
